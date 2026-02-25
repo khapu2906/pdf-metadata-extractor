@@ -1,0 +1,656 @@
+{
+  "file": "sample-4.pdf",
+  "source": "Canva",
+  "isPrintPDF": false,
+  "totalPages": 1,
+  "fonts": [
+    {
+      "key": "F7",
+      "realName": "ArialMT",
+      "baseFontRaw": "AAAAAA+ArialMT",
+      "isSubset": true,
+      "subtype": "Type0",
+      "encoding": "Identity-H",
+      "fontFamily": "ArialMT",
+      "fontStyle": null,
+      "fontWeight": null,
+      "italicAngle": null
+    },
+    {
+      "key": "F8",
+      "realName": "OpenSans-Regular",
+      "baseFontRaw": "BAAAAA+OpenSans-Regular",
+      "isSubset": true,
+      "subtype": "Type0",
+      "encoding": "Identity-H",
+      "fontFamily": "OpenSans",
+      "fontStyle": "Regular",
+      "fontWeight": null,
+      "italicAngle": null
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "width": 1440,
+      "height": 809.9999929999999,
+      "pageType": "hybrid",
+      "lines": [
+        {
+          "y": 636,
+          "text": "M A L I S T",
+          "elements": [
+            {
+              "type": "text",
+              "text": "M",
+              "x": 560.1446004606406,
+              "y": 635.374378196067,
+              "width": 34.98632656223633,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 595.1309270228769,
+              "y": 635.374378196067,
+              "width": 44.799987640000055,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "A",
+              "x": 628.7309163528773,
+              "y": 635.374378196067,
+              "width": 28.01367081276367,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 656.7445871656411,
+              "y": 635.374378196067,
+              "width": 44.799987360000124,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "L",
+              "x": 690.3445762856416,
+              "y": 635.374378196067,
+              "width": 23.358397306733405,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 713.7029735923749,
+              "y": 635.374378196067,
+              "width": 44.79998796000002,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 747.3029631623752,
+              "y": 635.374378196067,
+              "width": 11.668944773793946,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 758.9719079361691,
+              "y": 635.374378196067,
+              "width": 44.79998832000017,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "S",
+              "x": 792.5718977761696,
+              "y": 635.374378196067,
+              "width": 28.01367081276367,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 820.5855685889333,
+              "y": 635.374378196067,
+              "width": 44.799987359999975,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "T",
+              "x": 854.1855577089336,
+              "y": 635.374378196067,
+              "width": 25.655272211030276,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "fontRealName": "ArialMT",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "MALIST",
+              "x": 560.1446004606406,
+              "y": 635.374378196067,
+              "width": 319.69622945932326,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontRealName": "ArialMT",
+              "fontFamily": "ArialMT",
+              "fontStyle": null,
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "M",
+                  "x": 560.1446004606406,
+                  "y": 635.374378196067,
+                  "width": 34.98632656223633,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "A",
+                  "x": 628.7309163528773,
+                  "y": 635.374378196067,
+                  "width": 28.01367081276367,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "L",
+                  "x": 690.3445762856416,
+                  "y": 635.374378196067,
+                  "width": 23.358397306733405,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 747.3029631623752,
+                  "y": 635.374378196067,
+                  "width": 11.668944773793946,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "S",
+                  "x": 792.5718977761696,
+                  "y": 635.374378196067,
+                  "width": 28.01367081276367,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "T",
+                  "x": 854.1855577089336,
+                  "y": 635.374378196067,
+                  "width": 25.655272211030276,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "ArialMT",
+                  "fontStyle": null,
+                  "fontWeight": null,
+                  "fontRealName": "ArialMT",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 728,
+          "text": "M I N I",
+          "elements": [
+            {
+              "type": "text",
+              "text": "M",
+              "x": 653.6126535661383,
+              "y": 728.5300623145799,
+              "width": 30.577829579894804,
+              "height": 33.99750008343744,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 684.1904831460331,
+              "y": 728.5300623145799,
+              "width": 36.26518786137178,
+              "height": 0,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 711.3893729087748,
+              "y": 728.5300623145799,
+              "width": 9.495395701103815,
+              "height": 33.99750008343744,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 720.8847686098786,
+              "y": 728.5300623145799,
+              "width": 36.2663518710063,
+              "height": 0,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "N",
+              "x": 748.0845313798098,
+              "y": 728.5300623145799,
+              "width": 25.597727198597525,
+              "height": 33.99750008343744,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 773.6822585784073,
+              "y": 728.5300623145799,
+              "width": 36.26546264644071,
+              "height": 0,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 800.8813544299421,
+              "y": 728.5300623145799,
+              "width": 9.495395701103815,
+              "height": 33.99750008343744,
+              "fontSize": 33.99750008343744,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "MINI",
+              "x": 653.6126535661383,
+              "y": 728.5300623145799,
+              "width": 156.76409656490762,
+              "height": 33.99750008343744,
+              "fontSize": 33.99750008343744,
+              "fontRealName": "OpenSans-Regular",
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "M",
+                  "x": 653.6126535661383,
+                  "y": 728.5300623145799,
+                  "width": 30.577829579894804,
+                  "height": 33.99750008343744,
+                  "fontSize": 33.99750008343744,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 711.3893729087748,
+                  "y": 728.5300623145799,
+                  "width": 9.495395701103815,
+                  "height": 33.99750008343744,
+                  "fontSize": 33.99750008343744,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "N",
+                  "x": 748.0845313798098,
+                  "y": 728.5300623145799,
+                  "width": 25.597727198597525,
+                  "height": 33.99750008343744,
+                  "fontSize": 33.99750008343744,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 800.8813544299421,
+                  "y": 728.5300623145799,
+                  "width": 9.495395701103815,
+                  "height": 33.99750008343744,
+                  "fontSize": 33.99750008343744,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "file": "sample-1.pdf",
+  "source": "Inkscape",
+  "isPrintPDF": false,
+  "totalPages": 1,
+  "fonts": [
+    {
+      "key": "f-0-0",
+      "realName": "DejaVuSans-Bold",
+      "baseFontRaw": "DTGSAO+DejaVuSans-Bold",
+      "isSubset": true,
+      "subtype": "TrueType",
+      "encoding": "WinAnsiEncoding",
+      "fontFamily": "DejaVu Sans",
+      "fontStyle": "Bold",
+      "fontWeight": null,
+      "italicAngle": null
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "width": 251,
+      "height": 164,
+      "pageType": "hybrid",
+      "lines": [
+        {
+          "y": 80,
+          "text": "B U S I N E S S",
+          "elements": [
+            {
+              "type": "text",
+              "text": "B U S I N E S S",
+              "x": 87.668608,
+              "y": 79.379053,
+              "width": 78.82848787499998,
+              "height": 10.26022,
+              "fontSize": 10.204335,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "B U S I N E S S",
+              "x": 87.668608,
+              "y": 79.379053,
+              "width": 78.82848787499998,
+              "height": 10.26022,
+              "fontSize": 10.204335,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "B U S I N E S S",
+                  "x": 87.668608,
+                  "y": 79.379053,
+                  "width": 78.82848787499998,
+                  "height": 10.26022,
+                  "fontSize": 10.204335,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 90,
+          "text": "C O M P A N Y",
+          "elements": [
+            {
+              "type": "text",
+              "text": "C O M P A N Y",
+              "x": 79.826089,
+              "y": 90.948493,
+              "width": 89.79917059499998,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "C O M P A N Y",
+              "x": 79.826089,
+              "y": 90.948493,
+              "width": 89.79917059499999,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "C O M P A N Y",
+                  "x": 79.826089,
+                  "y": 90.948493,
+                  "width": 89.79917059499998,
+                  "height": 12.229576,
+                  "fontSize": 12.162965,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

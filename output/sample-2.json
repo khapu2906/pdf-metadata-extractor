@@ -1,0 +1,657 @@
+{
+  "file": "sample-2.pdf",
+  "source": "Inkscape",
+  "isPrintPDF": false,
+  "totalPages": 1,
+  "fonts": [
+    {
+      "key": "f-0-0",
+      "realName": "DejaVuSans-Bold",
+      "baseFontRaw": "WMFQAE+DejaVuSans-Bold",
+      "isSubset": true,
+      "subtype": "TrueType",
+      "encoding": "WinAnsiEncoding",
+      "fontFamily": "DejaVu Sans",
+      "fontStyle": "Bold",
+      "fontWeight": null,
+      "italicAngle": null
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "width": 251,
+      "height": 164,
+      "pageType": "hybrid",
+      "lines": [
+        {
+          "y": 54,
+          "text": "A L B E R T",
+          "elements": [
+            {
+              "type": "text",
+              "text": "A L B E R T",
+              "x": 42.06001,
+              "y": 54.156075,
+              "width": 70.50870810499998,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "A L B E R T",
+              "x": 42.06001,
+              "y": 54.156075,
+              "width": 70.50870810499998,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "A L B E R T",
+                  "x": 42.06001,
+                  "y": 54.156075,
+                  "width": 70.50870810499998,
+                  "height": 12.229576,
+                  "fontSize": 12.162965,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 66,
+          "text": "M U R P H Y",
+          "elements": [
+            {
+              "type": "text",
+              "text": "M U R P H Y",
+              "x": 42.06001,
+              "y": 66.385651,
+              "width": 77.344294435,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "M U R P H Y",
+              "x": 42.06001,
+              "y": 66.385651,
+              "width": 77.344294435,
+              "height": 12.229576,
+              "fontSize": 12.162965,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "M U R P H Y",
+                  "x": 42.06001,
+                  "y": 66.385651,
+                  "width": 77.344294435,
+                  "height": 12.229576,
+                  "fontSize": 12.162965,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 76,
+          "text": "P R O J E C T M A N A G E R",
+          "elements": [
+            {
+              "type": "text",
+              "text": "P R O J E C T",
+              "x": 43.590645,
+              "y": 75.686738,
+              "width": 29.769276132000005,
+              "height": 4.998716,
+              "fontSize": 4.971489,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 73.35992113200001,
+              "y": 75.686738,
+              "width": 0.7480000000000004,
+              "height": 0,
+              "fontSize": 4.971489,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "M A N A G E R",
+              "x": 77.07859490400001,
+              "y": 75.686738,
+              "width": 34.004984759999985,
+              "height": 4.998716,
+              "fontSize": 4.971489,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "P R O J E C T",
+              "x": 43.590645,
+              "y": 75.686738,
+              "width": 29.76927613200001,
+              "height": 4.998716,
+              "fontSize": 4.971489,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "P R O J E C T",
+                  "x": 43.590645,
+                  "y": 75.686738,
+                  "width": 29.769276132000005,
+                  "height": 4.998716,
+                  "fontSize": 4.971489,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            },
+            {
+              "text": "M A N A G E R",
+              "x": 77.07859490400001,
+              "y": 75.686738,
+              "width": 34.004984759999985,
+              "height": 4.998716,
+              "fontSize": 4.971489,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "M A N A G E R",
+                  "x": 77.07859490400001,
+                  "y": 75.686738,
+                  "width": 34.004984759999985,
+                  "height": 4.998716,
+                  "fontSize": 4.971489,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 92,
+          "text": "P A R I S",
+          "elements": [
+            {
+              "type": "text",
+              "text": "P A R I S",
+              "x": 52.03289,
+              "y": 91.615082244,
+              "width": 19.71616870999999,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "P A R I S",
+              "x": 52.03289,
+              "y": 91.615082244,
+              "width": 19.716168709999984,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "P A R I S",
+                  "x": 52.03289,
+                  "y": 91.615082244,
+                  "width": 19.71616870999999,
+                  "height": 4.522418,
+                  "fontSize": 4.360055,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 106,
+          "text": "5 5 5 S T R E E T",
+          "elements": [
+            {
+              "type": "text",
+              "text": "5 5 5",
+              "x": 52.03289,
+              "y": 105.051186122,
+              "width": 11.663147124999995,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 63.69603712499999,
+              "y": 105.051186122,
+              "width": 0.9479999999999984,
+              "height": 0,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            },
+            {
+              "type": "text",
+              "text": "S T R E E T",
+              "x": 67.82936926499998,
+              "y": 105.051186122,
+              "width": 24.89591404999998,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "5 5 5",
+              "x": 52.03289,
+              "y": 105.051186122,
+              "width": 11.663147124999995,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "5 5 5",
+                  "x": 52.03289,
+                  "y": 105.051186122,
+                  "width": 11.663147124999995,
+                  "height": 4.522418,
+                  "fontSize": 4.360055,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            },
+            {
+              "text": "S T R E E T",
+              "x": 67.82936926499998,
+              "y": 105.051186122,
+              "width": 24.895914049999973,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "S T R E E T",
+                  "x": 67.82936926499998,
+                  "y": 105.051186122,
+                  "width": 24.89591404999998,
+                  "height": 4.522418,
+                  "fontSize": 4.360055,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 118,
+          "text": "+ 1 2 3 4 - 5 6 7 8 9",
+          "elements": [
+            {
+              "type": "text",
+              "text": "+ 1 2 3 4 - 5 6 7 8 9",
+              "x": 52.03289,
+              "y": 118.48729,
+              "width": 45.67157612499997,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "+ 1 2 3 4 - 5 6 7 8 9",
+              "x": 52.03289,
+              "y": 118.48729,
+              "width": 45.67157612499998,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "+ 1 2 3 4 - 5 6 7 8 9",
+                  "x": 52.03289,
+                  "y": 118.48729,
+                  "width": 45.67157612499997,
+                  "height": 4.522418,
+                  "fontSize": 4.360055,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "y": 132,
+          "text": "C O M P A N Y . C O M",
+          "elements": [
+            {
+              "type": "text",
+              "text": "C O M P A N Y . C O M",
+              "x": 52.03289,
+              "y": 131.923393878,
+              "width": 49.99675068499998,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontSubtype": "TrueType",
+              "isSubsetFont": true,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "C O M P A N Y . C O M",
+              "x": 52.03289,
+              "y": 131.923393878,
+              "width": 49.996750684999974,
+              "height": 4.522418,
+              "fontSize": 4.360055,
+              "fontRealName": "DejaVuSans-Bold",
+              "fontFamily": "DejaVu Sans",
+              "fontStyle": "Bold",
+              "fontWeight": null,
+              "color": {
+                "r": 255,
+                "g": 255,
+                "b": 255
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "C O M P A N Y . C O M",
+                  "x": 52.03289,
+                  "y": 131.923393878,
+                  "width": 49.99675068499998,
+                  "height": 4.522418,
+                  "fontSize": 4.360055,
+                  "fontFamily": "DejaVu Sans",
+                  "fontStyle": "Bold",
+                  "fontWeight": null,
+                  "fontRealName": "DejaVuSans-Bold",
+                  "fontSubtype": "TrueType",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

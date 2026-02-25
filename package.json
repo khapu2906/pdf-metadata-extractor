@@ -1,0 +1,61 @@
+{
+  "name": "pdf-metadata-extractor",
+  "version": "1.0.0",
+  "description": "Extract text, fonts, colors, and layout metadata from PDF files. Supports file paths, URLs, and Buffers. Includes line/word grouping helpers for structured text output.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest --config jest.integration.js --verbose",
+    "example": "ts-node --transpileOnly examples/extract.ts",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "pdf",
+    "pdf-extract",
+    "pdf-parser",
+    "pdf-text",
+    "pdf-metadata",
+    "pdf-fonts",
+    "text-extraction",
+    "word-grouping",
+    "line-grouping",
+    "pdfjs",
+    "pdf-lib",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.624"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.3.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

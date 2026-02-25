@@ -1,0 +1,637 @@
+{
+  "file": "sample-3.pdf",
+  "source": "Canva",
+  "isPrintPDF": false,
+  "totalPages": 1,
+  "fonts": [
+    {
+      "key": "F4",
+      "realName": "OpenSans-Regular",
+      "baseFontRaw": "AAAAAA+OpenSans-Regular",
+      "isSubset": true,
+      "subtype": "Type0",
+      "encoding": "Identity-H",
+      "fontFamily": "OpenSans",
+      "fontStyle": "Regular",
+      "fontWeight": null,
+      "italicAngle": null
+    }
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "width": 1440,
+      "height": 809.9999929999999,
+      "pageType": "hybrid",
+      "lines": [
+        {
+          "y": 636,
+          "text": "M I N I M A L I S T",
+          "elements": [
+            {
+              "type": "text",
+              "text": "M",
+              "x": 450.2930425377891,
+              "y": 635.374378196067,
+              "width": 37.77538894602539,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 488.0684314838145,
+              "y": 635.374378196067,
+              "width": 44.799987640000055,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 521.6684208138149,
+              "y": 635.374378196067,
+              "width": 11.73046847123046,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 533.3988892850452,
+              "y": 635.374378196067,
+              "width": 44.799987720000125,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "N",
+              "x": 566.9988786750457,
+              "y": 635.374378196067,
+              "width": 31.623045662373045,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 598.6219243374187,
+              "y": 635.374378196067,
+              "width": 44.799987359999975,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 632.2219134574191,
+              "y": 635.374378196067,
+              "width": 11.73046847123046,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 643.9523819286496,
+              "y": 635.374378196067,
+              "width": 44.79998771999982,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "M",
+              "x": 677.5523713186499,
+              "y": 635.374378196067,
+              "width": 37.77538894602539,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 715.3277602646754,
+              "y": 635.374378196067,
+              "width": 44.799987640000055,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "A",
+              "x": 748.9277495946758,
+              "y": 635.374378196067,
+              "width": 26.557616133432614,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 775.4853657281083,
+              "y": 635.374378196067,
+              "width": 44.79998768000024,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "L",
+              "x": 809.0853550881088,
+              "y": 635.374378196067,
+              "width": 21.922850806547846,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 831.0082058946566,
+              "y": 635.374378196067,
+              "width": 44.79998804000009,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "I",
+              "x": 864.608195524657,
+              "y": 635.374378196067,
+              "width": 11.73046847123046,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 876.3386639958874,
+              "y": 635.374378196067,
+              "width": 44.799987720000125,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "S",
+              "x": 909.9386533858878,
+              "y": 635.374378196067,
+              "width": 23.03027232040528,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": " ",
+              "x": 932.968925706293,
+              "y": 635.374378196067,
+              "width": 44.79998796000002,
+              "height": 0,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            },
+            {
+              "type": "text",
+              "text": "T",
+              "x": 966.5689152762934,
+              "y": 635.374378196067,
+              "width": 23.132811536132813,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "fontRealName": "OpenSans-Regular",
+              "fontSubtype": "Type0",
+              "isSubsetFont": true,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              }
+            }
+          ],
+          "words": [
+            {
+              "text": "MINIMALIST",
+              "x": 450.2930425377891,
+              "y": 635.374378196067,
+              "width": 539.4086842746372,
+              "height": 41.99999825,
+              "fontSize": 41.99999825,
+              "fontRealName": "OpenSans-Regular",
+              "fontFamily": "OpenSans",
+              "fontStyle": "Regular",
+              "fontWeight": null,
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "elements": [
+                {
+                  "type": "text",
+                  "text": "M",
+                  "x": 450.2930425377891,
+                  "y": 635.374378196067,
+                  "width": 37.77538894602539,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 521.6684208138149,
+                  "y": 635.374378196067,
+                  "width": 11.73046847123046,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "N",
+                  "x": 566.9988786750457,
+                  "y": 635.374378196067,
+                  "width": 31.623045662373045,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 632.2219134574191,
+                  "y": 635.374378196067,
+                  "width": 11.73046847123046,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "M",
+                  "x": 677.5523713186499,
+                  "y": 635.374378196067,
+                  "width": 37.77538894602539,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "A",
+                  "x": 748.9277495946758,
+                  "y": 635.374378196067,
+                  "width": 26.557616133432614,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "L",
+                  "x": 809.0853550881088,
+                  "y": 635.374378196067,
+                  "width": 21.922850806547846,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "I",
+                  "x": 864.608195524657,
+                  "y": 635.374378196067,
+                  "width": 11.73046847123046,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "S",
+                  "x": 909.9386533858878,
+                  "y": 635.374378196067,
+                  "width": 23.03027232040528,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "T",
+                  "x": 966.5689152762934,
+                  "y": 635.374378196067,
+                  "width": 23.132811536132813,
+                  "height": 41.99999825,
+                  "fontSize": 41.99999825,
+                  "fontFamily": "OpenSans",
+                  "fontStyle": "Regular",
+                  "fontWeight": null,
+                  "fontRealName": "OpenSans-Regular",
+                  "fontSubtype": "Type0",
+                  "isSubsetFont": true,
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
