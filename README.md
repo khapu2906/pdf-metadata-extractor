@@ -1,6 +1,6 @@
 # pdf-metadata-extractor
 
-Extract text elements, fonts, colors, and layout metadata from PDF files. Supports file paths, URLs, and Buffers. Includes text-grouping helpers to reconstruct lines and words from raw PDF glyph streams.
+Extract text elements, fonts, colors, images, and vector graphics metadata from PDF files. Supports file paths, URLs, and Buffers. Includes text-grouping helpers to reconstruct lines and words from raw PDF glyph streams.
 
 ## Requirements
 
@@ -19,9 +19,11 @@ pnpm add pdf-metadata-extractor
 import { extractPDF } from "pdf-metadata-extractor";
 
 const result = await extractPDF("./document.pdf");
-console.log(result.totalPages);       // number of pages
-console.log(result.fonts);            // font list with real names, family, style, weight
+console.log(result.totalPages);            // number of pages
+console.log(result.fonts);                 // font list with real names, family, style, weight
 console.log(result.pages[0].textElements); // raw TextElement[] for page 1
+console.log(result.pages[0].rectElements); // colored rectangles / shapes
+console.log(result.pages[0].imageElements); // embedded images with position + metadata
 ```
 
 Input can be a **file path**, a **URL** (https), or a **Buffer**:
@@ -70,6 +72,37 @@ import { groupIntoLines, groupIntoWords } from "pdf-metadata-extractor";
 const lines = groupIntoLines(page.textElements);        // TextLine[]
 const words = groupIntoWords(lines[0].elements);        // TextWord[]
 ```
+
+## Working with graphics
+
+### Colored rectangles and paths
+
+```typescript
+for (const rect of page.rectElements) {
+  console.log(rect.x, rect.y, rect.width, rect.height);
+  console.log(rect.fillColor);   // RGB | null  e.g. { r: 244, g: 233, b: 215 }
+  console.log(rect.strokeColor); // RGB | null
+}
+```
+
+### Images
+
+```typescript
+for (const img of page.imageElements) {
+  console.log(img.name);                          // pdfjs internal XObject name
+  console.log(img.x, img.y, img.width, img.height); // display bounding box (pts)
+  console.log(img.imageWidth, img.imageHeight);   // source pixel dimensions
+  console.log(img.colorSpace, img.filter);        // e.g. "ICCBased", "DCTDecode"
+}
+```
+
+### Graphic summary
+
+```typescript
+const { imageCount, vectorCount } = page.graphicSummary;
+```
+
+---
 
 ## API
 
@@ -181,12 +214,12 @@ interface PageResult {
   width: number;            // pts
   height: number;           // pts
   pageType: "text" | "image" | "hybrid" | "vector" | "unknown";
-  elements: PageElement[];          // all elements (text + rect + path + image + xobject)
+  elements: PageElement[];  // all elements combined (text + rect + path + image)
   textElements: TextElement[];
   imageElements: ImageElement[];
-  xobjectElements: XObjectElement[];
   rectElements: RectElement[];
   pathElements: PathElement[];
+  xobjectElements: XObjectElement[];
   graphicSummary: GraphicSummary;
 }
 ```
@@ -209,6 +242,55 @@ interface TextElement {
   fontSubtype: string | null;    // "Type1" | "TrueType" | "CIDFontType2" | …
   isSubsetFont: boolean | null;
   color: RGB;
+}
+```
+
+### `RectElement`
+
+```typescript
+interface RectElement {
+  type: "rect";
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  fillColor: RGB | null;
+  strokeColor: RGB | null;
+  strokeWidth: number | null;
+}
+```
+
+### `PathElement`
+
+```typescript
+interface PathElement {
+  type: "path";
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  fillColor: RGB | null;
+  strokeColor: RGB | null;
+  strokeWidth: number | null;
+}
+```
+
+### `ImageElement`
+
+```typescript
+interface ImageElement {
+  type: "image";
+  name: string;              // XObject resource name from the PDF
+  x: number;                 // display position (pts, top-left origin)
+  y: number;
+  width: number;             // display size (pts)
+  height: number;
+  imageWidth: number | undefined;      // source pixel width
+  imageHeight: number | undefined;     // source pixel height
+  colorSpace: string | null | undefined;  // e.g. "ICCBased", "DeviceRGB"
+  bitsPerComponent: number | undefined;
+  filter: string | null | undefined;  // e.g. "DCTDecode", "FlateDecode"
+  imageMask: boolean | undefined;
 }
 ```
 
@@ -262,6 +344,15 @@ interface FontInfo {
 }
 ```
 
+### `GraphicSummary`
+
+```typescript
+interface GraphicSummary {
+  vectorCount: number;   // total rect + path elements on the page
+  imageCount: number;    // total image elements on the page
+}
+```
+
 ---
 
 ## JSON output example
@@ -269,7 +360,7 @@ interface FontInfo {
 ```json
 {
   "file": "document.pdf",
-  "totalPages": 2,
+  "totalPages": 1,
   "source": "Canva",
   "isPrintPDF": false,
   "fonts": [
@@ -288,7 +379,8 @@ interface FontInfo {
       "pageNumber": 1,
       "width": 595.28,
       "height": 841.89,
-      "pageType": "text",
+      "pageType": "hybrid",
+      "graphicSummary": { "vectorCount": 22, "imageCount": 1 },
       "lines": [
         {
           "y": 740,
@@ -296,10 +388,8 @@ interface FontInfo {
           "words": [
             {
               "text": "Hello",
-              "x": 72,
-              "y": 740,
-              "width": 42.5,
-              "height": 14,
+              "x": 72, "y": 740,
+              "width": 42.5, "height": 14,
               "fontSize": 14,
               "fontFamily": "OpenSans",
               "fontStyle": "normal",
@@ -329,7 +419,7 @@ pnpm run build
 pnpm run test
 
 # Run example (requires Node 18+)
-pnpm run example:json
+pnpm run example
 ```
 
 ## License

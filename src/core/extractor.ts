@@ -1,6 +1,7 @@
-import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
 import { PDFDocument } from "pdf-lib";
 import path from "path";
+import { pathToFileURL } from "url";
 
 import { loadInput } from "../pdf/loader";
 import { extractFonts } from "../pdf/fonts";
@@ -9,8 +10,14 @@ import { processPage } from "./pageProcessor";
 import { detectSource, detectPrintPDF } from "./sourceDetector";
 import { PDFResult, ExtractOptions } from "../types";
 
-// Disable worker in Node.js environment
-(pdfjsLib as unknown as { GlobalWorkerOptions: { workerSrc: string } }).GlobalWorkerOptions.workerSrc = "";
+// pdfjs v5 fake-worker mode: the library dynamically imports workerSrc on the
+// same thread when no real Web Worker is available.  An empty string no longer
+// works — we must supply a resolvable file:// URL so Node's dynamic import()
+// can load the worker module.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const _workerPath = (require as NodeRequire).resolve("pdfjs-dist/legacy/build/pdf.worker.mjs");
+(pdfjsLib as unknown as { GlobalWorkerOptions: { workerSrc: string } }).GlobalWorkerOptions.workerSrc =
+  pathToFileURL(_workerPath).href;
 
 export async function extractPDF(
   input: string | Buffer,
@@ -39,7 +46,7 @@ export async function extractPDF(
   const meta     = rawMeta as { info?: unknown; metadata?: unknown };
   const metaInfo = normalizeMetaInfo(meta?.info ?? {});
 
-  // realFontMap: { "F4": FontInfo, "F7": FontInfo, … } keyed by PDF resource name
+  // realFontMap: { "F4": FontInfo, "F7": FontInfo, … }
   const realFontMap = await extractFonts(pdfDoc);
 
   const pages = [];
@@ -51,7 +58,7 @@ export async function extractPDF(
       page as Parameters<typeof processPage>[0],
       i,
       pdfDoc,
-      i - 1,       // 0-based page index for pdf-lib
+      i - 1,
       realFontMap
     );
     pages.push(pageData);

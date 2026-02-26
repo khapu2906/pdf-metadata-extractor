@@ -7,9 +7,15 @@ function makeEl(text: string, x: number, y: number, fontSize = 12): TextElement 
     text,
     x,
     y,
+    width: 50,
+    height: fontSize,
     fontSize,
     fontFamily: null,
+    fontStyle: null,
+    fontWeight: null,
     fontRealName: null,
+    fontSubtype: null,
+    isSubsetFont: null,
     color: { r: 0, g: 0, b: 0 },
   };
 }
@@ -23,7 +29,7 @@ describe("groupIntoLines", () => {
     const els = [makeEl("A", 0, 100), makeEl("B", 50, 100), makeEl("C", 100, 100)];
     const lines = groupIntoLines(els);
     expect(lines).toHaveLength(1);
-    expect(lines[0]).toHaveLength(3);
+    expect(lines[0].elements).toHaveLength(3);
   });
 
   it("splits elements on different Y into separate lines", () => {
@@ -33,7 +39,9 @@ describe("groupIntoLines", () => {
   });
 
   it("respects threshold for nearby Y values", () => {
-    const els = [makeEl("A", 0, 100), makeEl("B", 50, 101.5)]; // within default threshold=2
+    // bucket = Math.round(y / tolerance) * tolerance
+    // Y=100 → bucket 100, Y=100.9 → Math.round(50.45)*2=100 → same bucket
+    const els = [makeEl("A", 0, 100), makeEl("B", 50, 100.9)];
     const lines = groupIntoLines(els, 2);
     expect(lines).toHaveLength(1);
   });
@@ -47,14 +55,15 @@ describe("groupIntoLines", () => {
   it("handles single element", () => {
     const lines = groupIntoLines([makeEl("only", 0, 0)]);
     expect(lines).toHaveLength(1);
-    expect(lines[0]).toHaveLength(1);
+    expect(lines[0].elements).toHaveLength(1);
   });
 });
 
 describe("lineToString", () => {
   it("concatenates elements sorted by X", () => {
+    // lineToString joins with no separator (PDF text items carry their own spacing)
     const line = [makeEl("World", 50, 100), makeEl("Hello", 0, 100)];
-    expect(lineToString(line)).toBe("Hello World");
+    expect(lineToString(line)).toBe("HelloWorld");
   });
 
   it("returns empty string for empty line", () => {

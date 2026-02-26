@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2026-02-26
+
+### Added
+
+#### Graphics extraction (new)
+- `ImageElement` — extracts embedded images with display bounding box (x, y, width, height in pts) and source metadata (imageWidth, imageHeight, colorSpace, bitsPerComponent, filter, imageMask)
+- `RectElement` — extracts rectangle paths with fillColor, strokeColor, strokeWidth; CTM (current transformation matrix) applied so coordinates are in page display space
+- `PathElement` — extracts non-rectangular paths (curves, polylines) as axis-aligned bounding boxes with fill/stroke color
+- `PageResult.rectElements`, `PageResult.pathElements`, `PageResult.imageElements` arrays
+- `PageResult.graphicSummary.vectorCount` and `imageCount` counters
+- `PageResult.elements` now includes all element types combined (text + rect + path + image)
+- Page type `"vector"` and `"hybrid"` now correctly classified when vector/image elements are present
+
+#### CTM tracking
+- Full current transformation matrix (save/restore/transform) tracked throughout operator list
+- Image bounding box derived from unit-square corners transformed through CTM
+- Rect/path corners transformed through CTM before computing axis-aligned bounding box
+
+### Changed
+
+#### pdfjs-dist upgrade: v3.11.174 → v5.4.624
+- Updated import to `pdfjs-dist/legacy/build/pdf.mjs` (legacy build still present in v5)
+- **Worker setup**: v5 fake-worker mode uses `await import(workerSrc)` internally; empty string no longer works. Fix: `pathToFileURL(require.resolve("pdfjs-dist/legacy/build/pdf.worker.mjs")).href`
+- **Color format**: v5 worker normalises all color ops (gray, RGB, CMYK) into `setFillRGBColor` (OPS 59) / `setStrokeRGBColor` (OPS 58) with a single `"#rrggbb"` hex string argument. The old `[r, g, b]` integer triple format (v3) is supported as a fallback
+- **`constructPath` (OPS 91) argument format**: v5 changed from `[opsArray, coordsArray]` to `[renderFn, [Float32Array], [minX, minY, maxX, maxY]]`. The rendering op (fill/stroke/both) and pre-computed bounding box are now embedded in the single op. Detection: `typeof args[0] === "number"` distinguishes v5 from v3
+
+#### `processPage` signature change
+- Old: `processPage(pdfjsPage, pageNumber, bridgeMap, realFontMap)`
+- New: `processPage(pdfjsPage, pageNumber, pdfDoc, pageIndex0, realFontMap)` — `pdfDoc` and `pageIndex0` passed through so the function can call `extractXObjectInfo` and `buildFontBridge` internally
+
+### Fixed
+- Image XObject name mismatch: pdfjs renames XObjects internally (`img_p0_1` ≠ PDF key `X5`). Resolved with positional fallback — Nth image paint op maps to Nth Image XObject in dict insertion order
+- `PDFRawStream` vs `PDFDict`: image XObjects are streams not plain dicts; `lookupMaybe(ref, PDFDict)` threw for them. Fixed: `ctx.lookup(ref)` then `.dict` property
+- `PDFNumber.asNumber()` used instead of the private `.numberValue` field for XObject dimension extraction
+
+---
+
 ## [1.0.0] - 2026-02-26
 
 ### Added
@@ -22,7 +59,7 @@ All notable changes to this project will be documented in this file.
 - Full font metadata on every `TextElement`: `fontFamily`, `fontStyle`, `fontWeight`, `fontRealName`, `fontSubtype`, `isSubsetFont`
 
 #### Color extraction
-- Color extracted from the pdfjs operator list (OPS 57 = gray, 59 = RGB, 61 = CMYK) and carried on every `TextElement` as `RGB`
+- Color extracted from the pdfjs operator list and carried on every `TextElement` as `RGB`
 - Utilities: `rgbFromArray()`, `rgbToHex()`, `BLACK`, `WHITE` constants
 
 #### Text grouping (parser)
@@ -48,7 +85,7 @@ All notable changes to this project will be documented in this file.
 - `BoundingBox` (from `parser/streamParser`)
 
 ### Technical notes
-- Uses **pdfjs-dist 3.11.174** legacy build (`pdfjs-dist/legacy/build/pdf.js`) with worker disabled for Node.js compatibility
+- Uses **pdfjs-dist 3.11.174** legacy build with fake worker disabled for Node.js compatibility
 - Uses **pdf-lib 1.17.x** for font dictionary traversal and raw content stream access
 - Content stream decompression: `zlib.inflateSync` → `zlib.inflateRawSync` → raw latin1 fallback
 - Requires Node.js ≥ 18 (native `fetch` for URL loading)

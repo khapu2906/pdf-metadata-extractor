@@ -1,6 +1,6 @@
 {
   "name": "pdf-metadata-extractor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Extract text, fonts, colors, and layout metadata from PDF files. Supports file paths, URLs, and Buffers. Includes line/word grouping helpers for structured text output.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

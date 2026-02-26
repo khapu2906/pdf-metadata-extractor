@@ -7,9 +7,9 @@ const ASSETS = path.resolve(__dirname, "../assets");
 
 async function main() {
   const files = [
-    // "sample-1.pdf",
-    // "sample-2.pdf",
-    // "sample-3.pdf",
+    "sample-1.pdf",
+    "sample-2.pdf",
+    "sample-3.pdf",
     "sample-4.pdf",
   ];
 
@@ -19,11 +19,6 @@ async function main() {
   for (const file of files) {
     try {
       const result = await extractPDF(path.join(ASSETS, file));
-
-      for (const page of result.pages) {
-        const rects = page.elements.find((eles) => eles.type == "rect" && eles.fillColor)
-        console.log(rects)
-      }
 
       // Build full structured text for each page
       const structured = {

@@ -11,7 +11,11 @@ function makeEl(x: number, y: number, width = 50, height = 12): TextElement {
     height,
     fontSize: 12,
     fontFamily: null,
+    fontStyle: null,
+    fontWeight: null,
     fontRealName: null,
+    fontSubtype: null,
+    isSubsetFont: null,
     color: { r: 0, g: 0, b: 0 },
   };
 }
@@ -37,11 +41,14 @@ describe("getBoundingBox", () => {
   });
 
   it("uses fontSize as height fallback when height is undefined", () => {
-    const el: TextElement = {
-      type: "text", text: "x", x: 0, y: 0,
-      fontSize: 16, fontFamily: null, fontRealName: null,
+    const el = {
+      type: "text" as const, text: "x", x: 0, y: 0,
+      width: 0, height: undefined,   // simulate missing height
+      fontSize: 16,
+      fontFamily: null, fontStyle: null, fontWeight: null,
+      fontRealName: null, fontSubtype: null, isSubsetFont: null,
       color: { r: 0, g: 0, b: 0 },
-    };
+    } as unknown as TextElement;
     const box = getBoundingBox([el]);
     expect(box!.height).toBe(16);
   });

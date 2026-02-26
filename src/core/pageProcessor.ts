@@ -105,24 +105,42 @@ function pointsBBox(
 
 // ─── Color helpers ────────────────────────────────────────────────────────────
 //
-// pdfjs-dist v3 (legacy/Node build) emits color component values already in
-// the 0–255 integer range for setFillRGBColor / setStrokeRGBColor etc.
-// We clamp and round directly — no 0–1 normalization needed.
+// pdfjs-dist v5: the worker normalises ALL color ops into setFillRGBColor (59)
+// / setStrokeRGBColor (58) and passes a single "#rrggbb" hex string as args[0].
+// OPS 57 (gray) and 61 (CMYK) are remapped before reaching us, so they will
+// not appear in the fnArray at runtime.
+//
+// pdfjs-dist v3 (legacy/Node) emitted [r, g, b] as 0–255 integers instead.
+// We handle both forms so the code degrades gracefully.
 
 function clampByte(raw: unknown): number {
   const n = typeof raw === "number" && isFinite(raw) ? raw : 0;
   return Math.max(0, Math.min(255, Math.round(n)));
 }
 
+/**
+ * Parse a color from pdfjs operator list args.
+ * - v5: args[0] is "#rrggbb" hex string
+ * - v3: args = [r, g, b] as 0–255 integers
+ */
+function parseColor(args: unknown[]): RGB {
+  const first = args[0];
+  if (typeof first === "string" && first.startsWith("#") && first.length >= 7) {
+    return {
+      r: parseInt(first.slice(1, 3), 16),
+      g: parseInt(first.slice(3, 5), 16),
+      b: parseInt(first.slice(5, 7), 16),
+    };
+  }
+  // v3 fallback: [r, g, b] as 0–255 integers
+  return { r: clampByte(args[0]), g: clampByte(args[1]), b: clampByte(args[2]) };
+}
+
 function grayRGB(args: unknown[]): RGB {
   const v = clampByte(args[0]);
   return { r: v, g: v, b: v };
 }
-function rgbRGB(args: unknown[]): RGB {
-  return { r: clampByte(args[0]), g: clampByte(args[1]), b: clampByte(args[2]) };
-}
 function cmykRGB(args: unknown[]): RGB {
-  // CMYK components may still be 0–1 floats; convert to RGB.
   const toF = (v: unknown) => Math.max(0, Math.min(1, typeof v === "number" ? v : 0));
   const c = toF(args[0]), m = toF(args[1]), y = toF(args[2]), k = toF(args[3]);
   return {
@@ -251,14 +269,16 @@ export async function processPage(
         break;
 
       // ── Fill color ────────────────────────────────────────────────────────
-      case OPS_FILL_GRAY:  fillColor = grayRGB(args); break;
-      case OPS_FILL_RGB:   fillColor = rgbRGB(args);  break;
-      case OPS_FILL_CMYK:  fillColor = cmykRGB(args); break;
+      // v5: all color ops normalised to OPS_FILL_RGB with "#rrggbb" hex arg.
+      // v3: separate gray/CMYK ops with numeric args.
+      case OPS_FILL_GRAY:  fillColor = grayRGB(args);   break;
+      case OPS_FILL_RGB:   fillColor = parseColor(args); break;
+      case OPS_FILL_CMYK:  fillColor = cmykRGB(args);   break;
 
       // ── Stroke color ──────────────────────────────────────────────────────
-      case OPS_STROKE_GRAY: strokeColor = grayRGB(args); break;
-      case OPS_STROKE_RGB:  strokeColor = rgbRGB(args);  break;
-      case OPS_STROKE_CMYK: strokeColor = cmykRGB(args); break;
+      case OPS_STROKE_GRAY: strokeColor = grayRGB(args);   break;
+      case OPS_STROKE_RGB:  strokeColor = parseColor(args); break;
+      case OPS_STROKE_CMYK: strokeColor = cmykRGB(args);   break;
 
       // ── Text show ops — record active fill color ──────────────────────────
       case OPS_SHOW_TEXT:
@@ -281,36 +301,66 @@ export async function processPage(
 
       // ── Batched path (constructPath) ──────────────────────────────────────
       case OPS_CONSTRUCT_PATH: {
-        const pathOps = args[0] as number[] | undefined;
-        const coords  = args[1] as number[] | undefined;
-        if (!Array.isArray(pathOps) || !Array.isArray(coords)) break;
+        if (typeof args[0] === "number") {
+          // ── pdfjs v5: args = [renderFn, [Float32Array | null], [minX,minY,maxX,maxY] | null]
+          // The rendering op (fill/stroke/both) is embedded, and the axis-aligned
+          // bounding box of the path is pre-computed in args[2].
+          const renderFn = args[0] as number;
+          const bboxRaw  = args[2] as Record<number, number> | null | undefined;
+          if (!bboxRaw) break;
 
-        let ci = 0;
-        for (const op of pathOps) {
-          switch (op) {
-            case OPS_RECTANGLE: {
-              const x = coords[ci++] ?? 0, y = coords[ci++] ?? 0;
-              const w = coords[ci++] ?? 0, h = coords[ci++] ?? 0;
-              pendingRects.push({ x, y, w, h });
-              break;
-            }
-            case OPS_MOVE_TO:
-            case OPS_LINE_TO:
-              pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
-              break;
-            case OPS_CURVE_TO:  // 6 coords
-              for (let j = 0; j < 3; j++)
-                pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
-              break;
-            case OPS_CURVE_TO2:  // 4 coords
-            case OPS_CURVE_TO3:
-              for (let j = 0; j < 2; j++)
-                pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
-              break;
-            // closePath (18): no coords
+          const minX = bboxRaw[0] ?? 0, minY = bboxRaw[1] ?? 0;
+          const maxX = bboxRaw[2] ?? 0, maxY = bboxRaw[3] ?? 0;
+
+          const hasFill   = renderFn !== OPS_STROKE && renderFn !== OPS_CLOSE_STROKE && renderFn !== OPS_END_PATH;
+          const hasStroke = renderFn !== OPS_FILL   && renderFn !== OPS_EO_FILL      && renderFn !== OPS_END_PATH;
+          const fc = hasFill   ? { ...fillColor }   : null;
+          const sc = hasStroke ? { ...strokeColor } : null;
+          const sw = hasStroke ? lineWidth          : null;
+
+          const corners: Array<[number, number]> = [
+            applyMatrix(ctm, minX, minY),
+            applyMatrix(ctm, maxX, minY),
+            applyMatrix(ctm, maxX, maxY),
+            applyMatrix(ctm, minX, maxY),
+          ];
+          const box = pointsBBox(corners, pageH);
+          if (box.width > 0 || box.height > 0) {
+            rectEls.push({ type: "rect", ...box, fillColor: fc, strokeColor: sc, strokeWidth: sw });
           }
+
+        } else {
+          // ── pdfjs v3: args = [opsArray, coordsArray]
+          const pathOps = args[0] as number[] | undefined;
+          const coords  = args[1] as number[] | undefined;
+          if (!Array.isArray(pathOps) || !Array.isArray(coords)) break;
+
+          let ci = 0;
+          for (const op of pathOps) {
+            switch (op) {
+              case OPS_RECTANGLE: {
+                const x = coords[ci++] ?? 0, y = coords[ci++] ?? 0;
+                const w = coords[ci++] ?? 0, h = coords[ci++] ?? 0;
+                pendingRects.push({ x, y, w, h });
+                break;
+              }
+              case OPS_MOVE_TO:
+              case OPS_LINE_TO:
+                pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
+                break;
+              case OPS_CURVE_TO:  // 6 coords
+                for (let j = 0; j < 3; j++)
+                  pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
+                break;
+              case OPS_CURVE_TO2:  // 4 coords
+              case OPS_CURVE_TO3:
+                for (let j = 0; j < 2; j++)
+                  pendingPoints.push([coords[ci++] ?? 0, coords[ci++] ?? 0]);
+                break;
+            }
+          }
+          hasPending = pendingRects.length > 0 || pendingPoints.length > 0;
         }
-        hasPending = pendingRects.length > 0 || pendingPoints.length > 0;
         break;
       }
 
